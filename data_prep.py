@@ -34,7 +34,8 @@ def wav_scp(filenames):
     results= []
     for filename in filenames:
         basename = filename.split('.')[0]
-        results.append("{} {}".format(basename.split('.')[0], basename sph2pipe -f wav ../tidigits/data/adults/filename.split('-')[0]/basename.split('-')[0]/basename.split('-')[1] |)
+        audio = basename sph2pipe -f wav ../tidigits/data/adults/filename.split('-')[0]/basename.split('-')[0]/basename.split('-')[1] |
+        results.append("{} {}".format(basename.split('.')[0], audio)
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/wav.scp', 'w') as train_text, open('data/test_digits/wav.scp', 'w') as test_text:
