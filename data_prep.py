@@ -7,12 +7,12 @@ import subprocess
 
 zeroes = []
 ones = []
-for fn in os.listdir('../data/adults/train/man'):
+for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man'):
     #if fn.startswith('0'):
     zeroes.append(fn)   # => training set
    # elif fn.startswith('1'):
         #ones.append(fn)     # => test set
-for fn in os.listdir('../data/adults/test/man'):
+for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/test/man'):
     ones.append(fn) 
 
 def text(filenames):
