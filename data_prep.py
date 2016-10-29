@@ -42,7 +42,7 @@ def wav_scp(filenames):
         spkid = get_spk_id(filename)
         basename = get_spk_id(filename) + '_' + get_utt_id(filename)  #<spkid>_<transcription><letter>
         pipe = 'sph2pipe -f wav ' + '/home/u/fall15/atruber/tidigits/data/adults/' +filename + ' |'
-        results.append("{} {}".format(basename, pipe)
+        results.append("{} {}".format(basename, pipe))
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/wav.scp', 'w') as train_text, open('data/test_digits/wav.scp', 'w') as test_text:
