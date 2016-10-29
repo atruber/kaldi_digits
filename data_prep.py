@@ -21,7 +21,7 @@ def text(filenames):
     results = []
     for filename in filenames:
         basename = filename.split('.')[0]
-        transcript = basename[:-1]
+        transcript = basename.split('/')[3][:-1]
         results.append("{} {}".format(basename.split('.')[0], transcript))
 
     return '\n'.join(sorted(results))
