@@ -8,9 +8,9 @@ import subprocess
 zeroes = []
 ones = []
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man'):
-    for f in fn:
+    #for f in fn:
     #if fn.startswith('0'):
-        zeroes.append(f) 
+    zeroes.append(fn) 
 print zeroes
           # => training set
    # elif fn.startswith('1'):
