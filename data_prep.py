@@ -10,12 +10,11 @@ ones = []
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man'):
     for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man/%s' % fn):
         zeroes.append(f) 
-print zeroes
           # => training set
    # elif fn.startswith('1'):
         #ones.append(fn)     # => test set
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/test/man'):
-    for f in fn:
+    for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/test/man/%s' % fn):
         ones.append(f) 
 
 def text(filenames):
