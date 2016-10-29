@@ -33,7 +33,7 @@ def wav_scp(filenames):
     results= []
     for filename in filenames:
         basename = filename.split('.')[0]
-        results.append("{} {}".format(basename.split('.')[0], 'tidigits/data/adults/train/man/'+filename))
+        results.append("{} {}".format(basename.split('.')[0], '/home/u/fall15/atruber/tidigits/data/adults/train/man/'+filename))
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/wav.scp', 'w') as train_text, open('data/test_digits/wav.scp', 'w') as test_text:
