@@ -27,7 +27,7 @@ def text(filenames):
     results = []
     for filename in filenames:
         basename = get_spk_id(filename) + '_' + get_utt_id(filename)  #<spkid>_<transcription><letter>
-        transcript = get_utt_id[:-1]
+        transcript = get_utt_id(filename[:-1]
         results.append("{} {}".format(basename, " ".join(transcript)))
     return '\n'.join(sorted(results))
 
