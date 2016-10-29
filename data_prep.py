@@ -21,13 +21,13 @@ def get_spk_id(filename):
     return filename.split('/')[2]
 
 def get_utt_id(filename): #always preceeded by spkid for sorting
-    return get_spk_id(filename)+(filename.split('/')[3].split('.')[0]) #<transcription><letter>
+    return get_spk_id(filename)+ '_' + (filename.split('/')[3].split('.')[0]) #<spkid>_<transcription><letter>
 
 def text(filenames):
     results = []
     for filename in filenames:
-        basename = get_spk_id(filename) + '_' + get_utt_id(filename)  #<spkid>_<transcription><letter>
-        transcript = get_utt_id(filename)[:-1]
+        basename = get_utt_id(filename)  
+        transcript = get_utt_id(filename).split('_')[1][:-1]
         results.append("{} {}".format(basename, " ".join(transcript)))
     return '\n'.join(sorted(results))
 
@@ -39,8 +39,7 @@ with open('data/train_digits/text', 'w') as train_text, open('data/test_digits/t
 def wav_scp(filenames):
     results= []
     for filename in filenames:
-        spkid = get_spk_id(filename)
-        basename = get_spk_id(filename) + '_' + get_utt_id(filename)  #<spkid>_<transcription><letter>
+        basename =  get_utt_id(filename)  #<spkid>_<transcription><letter>
         pipe = 'sph2pipe -f wav ' + '/home/u/fall15/atruber/tidigits/data/adults/' +filename + ' |'
         results.append("{} {}".format(basename, pipe))
     return '\n'.join(sorted(results))
