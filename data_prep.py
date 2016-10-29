@@ -8,7 +8,7 @@ import subprocess
 zeroes = []
 ones = []
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man'):
-    for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man/%s' %fn
+    for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man/%s' % fn)
     #if fn.startswith('0'):
     zeroes.append(f) 
 print zeroes
