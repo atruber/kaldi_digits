@@ -21,7 +21,7 @@ def get_spk_id(filename):
     return filename.split('/')[2]
 
 def get_utt_id(filename): #always preceeded by spkid for sorting
-    return get_spk_id(filename)+filename.split('/')[3]).split('.')[0] #<transcription><letter>
+    return get_spk_id(filename)+(filename.split('/')[3].split('.')[0]) #<transcription><letter>
 
 def text(filenames):
     results = []
