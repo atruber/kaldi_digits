@@ -4,6 +4,7 @@ import os
 import os.path
 import sys
 import subprocess
+import re
 
 zeroes = []
 ones = []
@@ -23,11 +24,17 @@ def get_spk_id(filename):
 def get_utt_id(filename): #always preceeded by spkid for sorting
     return get_spk_id(filename)+ '_' + (filename.split('/')[4].split('.')[0]) #<1st letter of set><1stletter of gender><spkid>_<transcription><letter>
 
+def convert_digits(s):
+    s = re.compile(s)
+    return s.sub('o','OH').sub('0','ZERO').sub('1','ONE').sub('2','TWO').sub('3','THREE') \
+            .sub('4','FOUR').sub('5','FIVE').sub('6','SIX').sub('7','SEVEN').sub('8','EIGHT') \
+            .sub('9','NINE')
+
 def text(filenames):
     results = []
     for filename in filenames:
         basename = get_utt_id(filename)  
-        transcript = get_utt_id(filename).split('_')[1][:-1]
+        transcript = convert_digits(get_utt_id(filename).split('_')[1][:-1])
         results.append("{} {}".format(basename, " ".join(transcript)))
     return '\n'.join(sorted(results))
 
