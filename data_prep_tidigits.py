@@ -8,11 +8,13 @@ import subprocess
 zeroes = [] #training
 ones = [] #test
 
-path = raw_input('Path to tidigits/data. For example: /home/u/fall15/atruber/tidigits/data/')
-training = raw_input ('List of path(s) to training set(s). For example: \n \'home/u/fall15/atruber/tidigits/data/adults/train/man\',\'home/u/fall15/atruber/tidigits/data/adults/train/woman\'').split(',')
-test = raw_input ('List of path(s) to test set(s)').split(',')
+#/home/u/fall15/atruber/tidigits/data/
+#home/u/fall15/atruber/tidigits/data/adults/train/man,home/u/fall15/atruber/tidigits/data/adults/train/woman
+#home/u/fall15/atruber/tidigits/data/adults/test/man,home/u/fall15/atruber/tidigits/data/adults/test/woman
 
-make_sets(training, test)
+path = raw_input('Path to tidigits/data. For example: /home/u/fall15/atruber/tidigits/data/: ')
+training = raw_input ('List of path(s) to training set(s). For example: \n home/u/fall15/atruber/tidigits/data/adults/train/man,home/u/fall15/atruber/tidigits/data/adults/train/woman: ').split(',')
+test = raw_input ('List of path(s) to test set(s); ').split(',')
 
 def make_sets(training, test): 
     for set in training:
@@ -30,6 +32,8 @@ def make_sets(training, test):
                 s = 'train' if 'train' in set else 'test'
                 g = 'man' if 'man' in set else 'woman'
                 ones.append(a + '/' + s + '/' + g + '/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
+
+make_sets(training, test)
 
 def get_spk_id(filename):
     return filename.split('/')[0][0] + filename.split('/')[2][0] +  filename.split('/')[3]
