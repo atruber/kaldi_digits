@@ -9,7 +9,7 @@ zeroes = []
 ones = []
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man'):
     for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man/%s' % fn):
-        zeroes.append('/adults/train/man/{}/{}'.format(fn,f))
+        zeroes.append('adults/train/man/{}/{}'.format(fn,f))
           # => training set
    # elif fn.startswith('1'):
         #ones.append(fn)     # => test set
