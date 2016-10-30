@@ -8,9 +8,9 @@ import subprocess
 zeroes = [] #training
 ones = [] #test
 
-path = input('Path to tidigits/data. For example: /home/u/fall15/atruber/tidigits/data/')
-training = input ('List of path(s) to training set(s). For example: \n [\'home/u/fall15/atruber/tidigits/data/adults/train/man\',\'home/u/fall15/atruber/tidigits/data/adults/train/woman\']')
-test = input ('List of path(s) to test set(s)')
+path = raw_input('Path to tidigits/data. For example: /home/u/fall15/atruber/tidigits/data/')
+training = raw_input ('List of path(s) to training set(s). For example: \n [\'home/u/fall15/atruber/tidigits/data/adults/train/man\',\'home/u/fall15/atruber/tidigits/data/adults/train/woman\']')
+test = raw_input ('List of path(s) to test set(s)')
 
 make_sets(training, test)
 
