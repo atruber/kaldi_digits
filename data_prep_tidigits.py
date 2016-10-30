@@ -4,23 +4,32 @@ import os
 import os.path
 import sys
 import subprocess
-import re
-'/home/u/fall15/atruber/tidigits/data/adults/train/man'
-'/home/u/fall15/atruber/tidigits/data/adults/test/man'
 
-zeroes = []
-ones = []
+zeroes = [] #training
+ones = [] #test
 
-def make_sets(training, test):
-    for fn in os.listdir(training):
-        for f in os.listdir(training +'/%s' % fn):
-            zeroes.append('adults/train/man/{}/{}'.format(fn,f))
-              # => training set
-       # elif fn.startswith('1'):
-            #ones.append(fn)     # => test set
-    for fn in os.listdir(test):
-        for f in os.listdir(test +'/%s' % fn):
-            ones.append('adults/test/man/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
+path = input('Path to tidigits/data. For example: /home/u/fall15/atruber/tidigits/data/')
+training = input ('List of path(s) to training set(s). For example: \n [\'home/u/fall15/atruber/tidigits/data/adults/train/man\',\'home/u/fall15/atruber/tidigits/data/adults/train/woman\']')
+test = input ('List of path(s) to test set(s)')
+
+make_sets(training, test)
+
+def make_sets(training, test): 
+    for set in training:
+        for fn in os.listdir(set):
+            for f in os.listdir(set +'/%s' % fn):
+                a = 'adults' if 'adults' in set else 'children'
+                s = 'train' if 'train' in set else 'test'
+                g = 'man' if 'man' in set else 'woman'
+                zeroes.append(a + '/' + s + '/' + g + '/{}/{}'.format(fn,f))
+
+    for set in test:   
+        for fn in os.listdir(set):
+            for f in os.listdir(set +'/%s' % fn):
+                a = 'adults' if 'adults' in set else 'children'
+                s = 'train' if 'train' in set else 'test'
+                g = 'man' if 'man' in set else 'woman'
+                ones.append(a + '/' + s + '/' + g + '/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
 
 def get_spk_id(filename):
     return filename.split('/')[0][0] + filename.split('/')[2][0] +  filename.split('/')[3]
@@ -50,7 +59,7 @@ def wav_scp(filenames):
     results= []
     for filename in filenames:
         basename =  get_utt_id(filename)  #<spkid>_<transcription><letter>
-        pipe = 'sph2pipe -f wav ' + '/home/u/fall15/atruber/tidigits/data' +filename + ' |'
+        pipe = 'sph2pipe -f wav ' + path +filename + ' |'
         results.append("{} {}".format(basename, pipe))
     return '\n'.join(sorted(results))
 
