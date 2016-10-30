@@ -9,12 +9,12 @@ zeroes = [] #training
 ones = [] #test
 
 #/home/u/fall15/atruber/tidigits/data/
-#home/u/fall15/atruber/tidigits/data/adults/train/man,home/u/fall15/atruber/tidigits/data/adults/train/woman
-#home/u/fall15/atruber/tidigits/data/adults/test/man,home/u/fall15/atruber/tidigits/data/adults/test/woman
+#/home/u/fall15/atruber/tidigits/data/adults/train/man,/home/u/fall15/atruber/tidigits/data/adults/train/woman
+#/home/u/fall15/atruber/tidigits/data/adults/test/man,/home/u/fall15/atruber/tidigits/data/adults/test/woman
 
 path = raw_input('Path to tidigits/data. For example: /home/u/fall15/atruber/tidigits/data/: ')
-training = raw_input ('List of path(s) to training set(s). For example: \n home/u/fall15/atruber/tidigits/data/adults/train/man,home/u/fall15/atruber/tidigits/data/adults/train/woman: ').split(',')
-test = raw_input ('List of path(s) to test set(s); ').split(',')
+training = raw_input ('List of path(s) to training set(s). For example: \n /home/u/fall15/atruber/tidigits/data/adults/train/man,/home/u/fall15/atruber/tidigits/data/adults/train/woman: ').split(',')
+test = raw_input ('List of path(s) to test set(s): ').split(',')
 
 def make_sets(training, test): 
     for set in training:
