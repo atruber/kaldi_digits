@@ -3,7 +3,7 @@
 import os
 import os.path
 import sys
-import subprocess
+import replaceprocess
 import re
 
 zeroes = []
@@ -25,10 +25,9 @@ def get_utt_id(filename): #always preceeded by spkid for sorting
     return get_spk_id(filename)+ '_' + (filename.split('/')[4].split('.')[0]) #<1st letter of set><1stletter of gender><spkid>_<transcription><letter>
 
 def convert_digits(s):
-    t = re.compile(s)
-    return t.sub('o','OH').sub('0','ZERO').sub('1','ONE').sub('2','TWO').sub('3','THREE') \
-            .sub('4','FOUR').sub('5','FIVE').sub('6','SIX').sub('7','SEVEN').sub('8','EIGHT') \
-            .sub('9','NINE')
+    return s.replace('o','OH').replace('0','ZERO').replace('1','ONE').replace('2','TWO').replace('3','THREE') \
+            .replace('4','FOUR').replace('5','FIVE').replace('6','SIX').replace('7','SEVEN').replace('8','EIGHT') \
+            .replace('9','NINE')
 
 def text(filenames):
     results = []
