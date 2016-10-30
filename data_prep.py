@@ -53,7 +53,9 @@ with open('data/train_digits/wav.scp', 'w') as train_text, open('data/test_digit
 def utt2spk(filenames):
     results =[]
     for filename in filenames:
-        results.append("{} {}".format(get_utt_id(filename), get_spk_id(filename)))
+        uttid = get_utt_id(filename)
+        spkid = get_spk_id(filename)
+        results.append("{} {}".format(uttid, spkid))
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/utt2spk', 'w') as train_text, open('data/test_digits/utt2spk', 'w') as test_text:
