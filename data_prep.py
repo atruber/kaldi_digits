@@ -18,6 +18,7 @@ for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/test/man'):
         ones.append('adults/test/man/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
 
 def get_spk_id(filename):
+    print filename
     return filename.split('/')[0][0] + filename.split('/')[2][0] +  filename.split('/')[3]
 
 def get_utt_id(filename): #always preceeded by spkid for sorting
