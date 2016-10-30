@@ -25,8 +25,8 @@ def get_utt_id(filename): #always preceeded by spkid for sorting
     return get_spk_id(filename)+ '_' + (filename.split('/')[4].split('.')[0]) #<1st letter of set><1stletter of gender><spkid>_<transcription><letter>
 
 def convert_digits(s):
-    s = re.compile(s)
-    return s.sub('o','OH').sub('0','ZERO').sub('1','ONE').sub('2','TWO').sub('3','THREE') \
+    t = re.compile(s)
+    return t.sub('o','OH').sub('0','ZERO').sub('1','ONE').sub('2','TWO').sub('3','THREE') \
             .sub('4','FOUR').sub('5','FIVE').sub('6','SIX').sub('7','SEVEN').sub('8','EIGHT') \
             .sub('9','NINE')
 
