@@ -9,19 +9,19 @@ zeroes = []
 ones = []
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man'):
     for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/train/man/%s' % fn):
-        zeroes.append('train/man/{}/{}'.format(fn,f))
+        zeroes.append('/adults/train/man/{}/{}'.format(fn,f))
           # => training set
    # elif fn.startswith('1'):
         #ones.append(fn)     # => test set
 for fn in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/test/man'):
     for f in os.listdir('/home/u/fall15/atruber/tidigits/data/adults/test/man/%s' % fn):
-        ones.append('test/man/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
+        ones.append('adults/test/man/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
 
 def get_spk_id(filename):
-    return filename.split('/')[2]
+    return filename.split('/')[0][0] + filename.split('/')[2][0] +  filename.split('/')[3]
 
 def get_utt_id(filename): #always preceeded by spkid for sorting
-    return get_spk_id(filename)+ '_' + (filename.split('/')[3].split('.')[0]) #<spkid>_<transcription><letter>
+    return get_spk_id(filename)+ '_' + (filename.split('/')[4].split('.')[0]) #<1st letter of set><1stletter of gender><spkid>_<transcription><letter>
 
 def text(filenames):
     results = []
@@ -40,7 +40,7 @@ def wav_scp(filenames):
     results= []
     for filename in filenames:
         basename =  get_utt_id(filename)  #<spkid>_<transcription><letter>
-        pipe = 'sph2pipe -f wav ' + '/home/u/fall15/atruber/tidigits/data/adults/' +filename + ' |'
+        pipe = 'sph2pipe -f wav ' + '/home/u/fall15/atruber/tidigits/data' +filename + ' |'
         results.append("{} {}".format(basename, pipe))
     return '\n'.join(sorted(results))
 
