@@ -44,7 +44,7 @@ def wav_scp(filenames):
     results= []
     for filename in filenames:
         basename =  get_utt_id(filename)  #<spkid>_<transcription><letter>
-        pipe = '../kaldi/tools/sph2pipe_v2.5/sph2pipe -f wav ' + path +filename + ' |'
+        pipe = path +filename + ' |'
         results.append("{} {}".format(basename, pipe))
     return '\n'.join(sorted(results))
 
