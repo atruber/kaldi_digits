@@ -1,5 +1,6 @@
 #! /bin/bash
-rm -rf data
+rm -rf data #start with fresh directories
+rm -rf dict
 mkdir -p data/train_digits
 mkdir -p data/test_digits
 ./data_prep_tidigits.py
