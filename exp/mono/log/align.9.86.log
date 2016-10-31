@@ -1,0 +1,23 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 1 exp/mono/9.mdl - |" "ark:gunzip -c exp/mono/fsts.86.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train_digits/split112/86/utt2spk scp:data/train_digits/split112/86/cmvn.scp scp:data/train_digits/split112/86/feats.scp ark:- | add-deltas ark:- ark:- |" "ark,t:|gzip -c >exp/mono/ali.86.gz" 
+# Started at Sun Oct 30 22:23:41 EDT 2016
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/mono/9.mdl - |' 'ark:gunzip -c exp/mono/fsts.86.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train_digits/split112/86/utt2spk scp:data/train_digits/split112/86/cmvn.scp scp:data/train_digits/split112/86/feats.scp ark:- | add-deltas ark:- ark:- |' 'ark,t:|gzip -c >exp/mono/ali.86.gz' 
+gmm-boost-silence --boost=1.0 1 exp/mono/9.mdl - 
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:103) Wrote model to -
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train_digits/split112/86/utt2spk scp:data/train_digits/split112/86/cmvn.scp scp:data/train_digits/split112/86/feats.scp ark:- 
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_13583a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_2474822a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_3347o99a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_3867795a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_9789267a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_9882a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_992o372a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkc_o88o145a with beam 40
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 77 utterances, errors on 0
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:129) Overall log-likelihood per frame is -99.4403 over 16749 frames.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:131) Retried 8 out of 77 utterances.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:133) Done 77, errors on 0
+# Accounting: time=4 threads=1
+# Ended (code 0) at Sun Oct 30 22:23:45 EDT 2016, elapsed time 4 seconds

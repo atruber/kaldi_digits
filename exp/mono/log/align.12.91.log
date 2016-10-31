@@ -1,0 +1,35 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 1 exp/mono/12.mdl - |" "ark:gunzip -c exp/mono/fsts.91.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train_digits/split112/91/utt2spk scp:data/train_digits/split112/91/cmvn.scp scp:data/train_digits/split112/91/feats.scp ark:- | add-deltas ark:- ark:- |" "ark,t:|gzip -c >exp/mono/ali.91.gz" 
+# Started at Sun Oct 30 22:26:03 EDT 2016
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/mono/12.mdl - |' 'ark:gunzip -c exp/mono/fsts.91.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train_digits/split112/91/utt2spk scp:data/train_digits/split112/91/cmvn.scp scp:data/train_digits/split112/91/feats.scp ark:- | add-deltas ark:- ark:- |' 'ark,t:|gzip -c >exp/mono/ali.91.gz' 
+gmm-boost-silence --boost=1.0 1 exp/mono/12.mdl - 
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:103) Wrote model to -
+apply-cmvn --utt2spk=ark:data/train_digits/split112/91/utt2spk scp:data/train_digits/split112/91/cmvn.scp scp:data/train_digits/split112/91/feats.scp ark:- 
+add-deltas ark:- ark:- 
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_13oo249a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_21844a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_2344a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_24388a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_3255a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_339a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_353a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_43348a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_45964a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_4o63266a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_4z51z98a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_699717oa with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_7395o36a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_73z91z4a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_781516za with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_83662o9a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_8389223a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_877o8a with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_93165a with beam 40
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 77 utterances, errors on 0
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance awkt_oo128a with beam 40
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:129) Overall log-likelihood per frame is -93.6432 over 12551 frames.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:131) Retried 20 out of 77 utterances.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:133) Done 77, errors on 0
+# Accounting: time=4 threads=1
+# Ended (code 0) at Sun Oct 30 22:26:07 EDT 2016, elapsed time 4 seconds
