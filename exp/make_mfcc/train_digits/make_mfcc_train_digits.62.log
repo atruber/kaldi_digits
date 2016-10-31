@@ -1,0 +1,1780 @@
+# compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train_digits/wav_train_digits.62.scp ark:- | copy-feats --compress=true ark:- ark,scp:/home/u/fall15/atruber/kaldi_digits/data/train_digits/data/raw_mfcc_train_digits.62.ark,/home/u/fall15/atruber/kaldi_digits/data/train_digits/data/raw_mfcc_train_digits.62.scp 
+# Started at Sun Oct 30 20:26:48 EDT 2016
+#
+copy-feats --compress=true ark:- ark,scp:/home/u/fall15/atruber/kaldi_digits/data/train_digits/data/raw_mfcc_train_digits.62.ark,/home/u/fall15/atruber/kaldi_digits/data/train_digits/data/raw_mfcc_train_digits.62.scp 
+compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train_digits/wav_train_digits.62.scp ark:- 
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/13a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/13a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/149z5a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/149z5a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/15a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/15a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/1739852a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/1739852a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/1a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/1a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/1b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/1b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/22a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/22a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/24a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/24a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/286za.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/286za.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/29458a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/29458a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/2a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/2a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/2b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/2b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/2z628a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/2z628a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/325a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/325a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/35337a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/35337a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/36o6o31a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/36o6o31a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/39a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/39a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/3a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/3a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/3b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/3b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/3z2za.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/3z2za.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/41o71a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/41o71a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/469a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/469a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/47oa.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/47oa.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4o9a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4o9a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4zza.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/4zza.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/51a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/51a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/54434a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/54434a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5664a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5664a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/578a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/578a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5oa.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/5oa.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6384a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6384a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6423219a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6423219a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/652a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/652a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/674a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/674a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/682o1a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/682o1a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/6b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7112691a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7112691a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7534955a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7534955a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/76a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/76a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/79o2975a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/79o2975a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/79z18a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/79z18a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/7b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/81za.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/81za.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/836a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/836a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/87o33o5a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/87o33o5a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8o5a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8o5a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8z3za.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/8z3za.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/91a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/91a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9272a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9272a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9386a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9386a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/961o4a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/961o4a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9b.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9b.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9o62723a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/9o62723a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/o13o7ooa.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/o13o7ooa.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/o8a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/o8a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oa.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oa.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/ob.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/ob.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oo215a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oo215a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oo47a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oo47a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oo84a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/oo84a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z4a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z4a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z731437a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z731437a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z88z674a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z88z674a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z9935a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/z9935a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/za.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/za.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/zb.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/zb.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/zzz8a.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jp/zzz8a.wav | had nonzero return status 32512
+sh: sph2pipe: command not found
+ERROR (compute-mfcc-feats:Read4ByteTag():wave-reader.cc:75) WaveData: expected 4-byte chunk-name, got read errror
+
+[ Stack-Trace: ]
+0   compute-mfcc-feats                  0x0000000101d18a17 _ZN5kaldiL18KaldiGetStackTraceEv + 71
+1   compute-mfcc-feats                  0x0000000101d18721 _ZN5kaldi13MessageLogger13HandleMessageERKNS_18LogMessageEnvelopeEPKc + 977
+2   compute-mfcc-feats                  0x0000000101d182ea _ZN5kaldi13MessageLoggerD2Ev + 298
+3   compute-mfcc-feats                  0x0000000101d189c5 _ZN5kaldi13MessageLoggerD1Ev + 21
+4   compute-mfcc-feats                  0x0000000101c6dd93 _ZN5kaldi8WaveData12Read4ByteTagERSiPc + 195
+5   compute-mfcc-feats                  0x0000000101c6e075 _ZN5kaldi8WaveData4ReadERSiNS0_12ReadDataTypeE + 69
+6   compute-mfcc-feats                  0x0000000101c3da9e _ZN5kaldi10WaveHolder4ReadERSi + 30
+7   compute-mfcc-feats                  0x0000000101c3f7e2 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE18EnsureObjectLoadedEv + 818
+8   compute-mfcc-feats                  0x0000000101c3ef50 _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4NextEv + 80
+9   compute-mfcc-feats                  0x0000000101c3e71f _ZN5kaldi31SequentialTableReaderScriptImplINS_10WaveHolderEE4OpenERKSs + 1103
+10  compute-mfcc-feats                  0x0000000101c3b871 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEE4OpenERKSs + 769
+11  compute-mfcc-feats                  0x0000000101c3b485 _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC2ERKSs + 85
+12  compute-mfcc-feats                  0x0000000101c337dd _ZN5kaldi21SequentialTableReaderINS_10WaveHolderEEC1ERKSs + 29
+13  compute-mfcc-feats                  0x0000000101c312bb main + 2859
+14  libdyld.dylib                       0x00007fff999cb5ad start + 1
+
+WARNING (compute-mfcc-feats:Read():feat/wave-reader.h:165) Exception caught in WaveHolder object (reading). 
+WARNING (compute-mfcc-feats:EnsureObjectLoaded():util/kaldi-table-inl.h:317) Failed to load object from 'sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jr/159818oa.wav |'
+WARNING (compute-mfcc-feats:Close():kaldi-io.cc:501) Pipe sph2pipe -f wav /home/u/fall15/atruber/tidigits/data/adults/train/man/jr/159818oa.wav | had nonzero return status 32512
+LOG (compute-mfcc-feats:main():compute-mfcc-feats.cc:181)  Done 0 out of 0 utterances.
+LOG (copy-feats:main():copy-feats.cc:120) Copied 0 feature matrices.
+# Accounting: time=8 threads=1
+# Ended (code 1) at Sun Oct 30 20:26:56 EDT 2016, elapsed time 8 seconds
