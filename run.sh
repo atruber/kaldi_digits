@@ -1,3 +1,5 @@
 #! /bin/bash
 
-# placeholder for the *uber* script to run entire pipeline
+./run1.sh
+./run2.sh
+./run3.sh
