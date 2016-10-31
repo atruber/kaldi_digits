@@ -36,7 +36,7 @@ def make_sets(training, test):
                     if 'boy' in set:
                         g = 'boy'
                     if 'girl' in set:
-                        g = girl
+                        g = 'girl'
                     ones.append(a + '/' + s + '/' + g + '/{}/{}'.format(fn,f))   #set/gender/<spk id>/<transcription><letter>.wav
 
 make_sets(training, test)
