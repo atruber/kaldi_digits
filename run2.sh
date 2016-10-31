@@ -32,4 +32,4 @@ steps/make_mfcc.sh --mfcc-config conf/mfcc2.conf --nj 1 data/test_digits exp/mak
 steps/compute_cmvn_stats.sh data/test_digits exp/make_mfcc/test_digits
 utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph_tgpr
 steps/decode.sh --nj 1 exp/mono/graph_tgpr data/test_digits exp/mono/decode_test_digits2
-steps/get_ctm.sh data/test_digits2 exp/mono/graph_tgpr exp/mono/decode_test_digits2
+steps/get_ctm.sh data/test_digits exp/mono/graph_tgpr exp/mono/decode_test_digits2
