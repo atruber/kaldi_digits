@@ -4,7 +4,7 @@
 
 mkdir -p data/train_digits
 mkdir -p data/test_digits
-./data_prep.py
+./data_prep_tidigits.py
 utils/utt2spk_to_spk2utt.pl data/train_digits/utt2spk > data/train_digits/spk2utt
 utils/utt2spk_to_spk2utt.pl data/test_digits/utt2spk > data/test_digits/spk2utt
 utils/fix_data_dir.sh data/train_digits/
