@@ -24,7 +24,7 @@ def get_utt_id(filename): #always preceeded by spkid for sorting
     return get_spk_id(filename)+ '_' + filename 
 
 def convert_digits(s):
-    return s.replace('o','OH').replace('0','ZERO').replace('1','ONE').replace('2','TWO').replace('3','THREE') \
+    return s.replace('o','OH').replace('z','ZERO').replace('1','ONE').replace('2','TWO').replace('3','THREE') \
             .replace('4','FOUR').replace('5','FIVE').replace('6','SIX').replace('7','SEVEN').replace('8','EIGHT') \
             .replace('9','NINE')
 
@@ -32,8 +32,8 @@ def text(filenames):
     results = []
     for filename in filenames:
         basename = get_utt_id(filename)  
-        transcript = convert_digits(filename.split('_')[0])
-        results.append("{} {}".format(basename, " ".join(transcript)))
+        transcript = filename.split('_')[0]
+        results.append("{} {}".format(basename, convert_digits(" ".join(transcript))))
     return '\n'.join(sorted(results))
 
 with open('data/test_digits/text', 'w') as test_text:
