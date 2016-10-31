@@ -23,7 +23,7 @@ utils/prepare_lang.sh --position-dependent-phones false dict "<SIL>" dict/tmp da
 ../kaldi/tools/openfst/bin/fstcompile --isymbols=data/lang/words.txt --osymbols=data/lang/words.txt --keep_isymbols=false G.txt > data/lang/G.fst
 steps/make_mfcc.sh --nj 225 data/train_digits exp/make_mfcc/train_digits
 steps/compute_cmvn_stats.sh data/train_digits exp/make_mfcc/train_digits
-steps/train_mono.sh --nj 225 --cmd utils/run.pl data/train_digits1 data/lang exp/mono 
+steps/train_mono.sh --nj 225 --cmd utils/run.pl data/train_digits data/lang exp/mono 
 ../kaldi/src/fstbin/fstcopy 'ark:gunzip -c ../kaldi_digits/exp/mono/fsts.1.gz|' ark,t:- | head -n 20
 steps/make_mfcc.sh --nj 113 data/test_digits exp/make_mfcc/test_digits
 steps/compute_cmvn_stats.sh data/test_digits exp/make_mfcc/test_digits
