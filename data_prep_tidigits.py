@@ -25,8 +25,9 @@ def make_sets(training, test):
                 g = 'woman' if 'woman' in set else 'man'
                 zeroes.append(a + '/' + s + '/' + g + '/{}/{}'.format(fn,f))
 
-    if set != '':
-        for set in test:   
+
+    for set in test:
+        if set != '' :
             for fn in os.listdir(set):
                 for f in os.listdir(set +'/%s' % fn):
                     a = 'adults' if 'adults' in set else 'children'
