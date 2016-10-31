@@ -5,7 +5,6 @@ import os.path
 import sys
 import subprocess
 
-zeroes = [] #training
 ones = [] #test
 
 #/home/u/fall15/atruber/free-spoken-digit-dataset/recordings/
@@ -14,7 +13,7 @@ path = raw_input('Path to tidigits/data. For example: /home/u/fall15/atruber/fre
 
 def make_sets(path): 
 	for f in os.listdir(path):
-        ones.append(f)
+    	ones.append(f)
 
 make_sets(path)
 
@@ -38,7 +37,6 @@ def text(filenames):
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/text', 'w') as train_text, open('data/test_digits/text', 'w') as test_text:
-    train_text.write(text(zeroes))
     test_text.write(text(ones))
 
 # finish this method
@@ -51,7 +49,6 @@ def wav_scp(filenames):
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/wav.scp', 'w') as train_text, open('data/test_digits/wav.scp', 'w') as test_text:
-    train_text.write(wav_scp(zeroes))
     test_text.write(wav_scp(ones))
 
 
@@ -65,7 +62,6 @@ def utt2spk(filenames):
     return '\n'.join(sorted(results))
 
 with open('data/train_digits/utt2spk', 'w') as train_text, open('data/test_digits/utt2spk', 'w') as test_text:
-    train_text.write(utt2spk(zeroes))
     test_text.write(utt2spk(ones))
 
 
