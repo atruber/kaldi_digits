@@ -57,6 +57,7 @@ def utt2spk(filenames):
     results =[]
     for filename in filenames:
         spkid = get_spk_id(filename)
+        uttid = get_utt_id(filename)
         basename =  get_utt_id(filename) 
         results.append("{} {}".format(uttid, spkid))
     return '\n'.join(sorted(results))
