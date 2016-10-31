@@ -36,7 +36,7 @@ def text(filenames):
         results.append("{} {}".format(basename, " ".join(transcript)))
     return '\n'.join(sorted(results))
 
-with open('data/train_digits/text', 'w') as train_text, open('data/test_digits/text', 'w') as test_text:
+with open('data/test_digits/text', 'w') as test_text:
     test_text.write(text(ones))
 
 # finish this method
@@ -48,7 +48,7 @@ def wav_scp(filenames):
         results.append("{} {}".format(basename, pipe))
     return '\n'.join(sorted(results))
 
-with open('data/train_digits/wav.scp', 'w') as train_text, open('data/test_digits/wav.scp', 'w') as test_text:
+with open('data/test_digits/wav.scp', 'w') as test_text:
     test_text.write(wav_scp(ones))
 
 
@@ -62,7 +62,7 @@ def utt2spk(filenames):
         results.append("{} {}".format(uttid, spkid))
     return '\n'.join(sorted(results))
 
-with open('data/train_digits/utt2spk', 'w') as train_text, open('data/test_digits/utt2spk', 'w') as test_text:
+with open('data/test_digits/utt2spk', 'w') as test_text:
     test_text.write(utt2spk(ones))
 
 
