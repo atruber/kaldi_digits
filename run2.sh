@@ -24,11 +24,11 @@ cp dict/lexicon.txt dict/lexicon_words.txt
 echo "<SIL> SIL" >> dict/lexicon.txt 
 utils/prepare_lang.sh --position-dependent-phones false dict "<SIL>" dict/tmp data/lang
 ../kaldi/tools/openfst/bin/fstcompile --isymbols=data/lang/words.txt --osymbols=data/lang/words.txt --keep_isymbols=false G.txt > data/lang/G.fst
-steps/make_mfcc.sh --mfcc-config conf/mfcc2.conf --nj 112 data/train_digits exp/make_mfcc/train_digits
+steps/make_mfcc.sh --nj 112 data/train_digits exp/make_mfcc/train_digits
 steps/compute_cmvn_stats.sh data/train_digits exp/make_mfcc/train_digits
 steps/train_mono.sh --nj 112 --cmd utils/run.pl data/train_digits data/lang exp/mono 
 ../kaldi/src/fstbin/fstcopy 'ark:gunzip -c ../kaldi_digits/exp/mono/fsts.1.gz|' ark,t:- | head -n 20
-steps/make_mfcc.sh --nj 1 data/test_digits exp/make_mfcc/test_digits
+steps/make_mfcc.sh --mfcc-config conf/mfcc2.conf --nj 1 data/test_digits exp/make_mfcc/test_digits
 steps/compute_cmvn_stats.sh data/test_digits exp/make_mfcc/test_digits
 utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph_tgpr
 steps/decode.sh --nj 1 exp/mono/graph_tgpr data/test_digits exp/mono/decode_test_digits2
