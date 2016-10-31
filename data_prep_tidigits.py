@@ -22,7 +22,7 @@ def make_sets(training, test):
             for f in os.listdir(set +'/%s' % fn):
                 a = 'adults' if 'adults' in set else 'children'
                 s = 'train' if 'train' in set else 'test'
-                g = 'man' if 'man' in set else 'woman'
+                g = 'woman' if 'woman' in set else 'man'
                 zeroes.append(a + '/' + s + '/' + g + '/{}/{}'.format(fn,f))
 
     for set in test:   
