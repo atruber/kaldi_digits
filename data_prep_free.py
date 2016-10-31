@@ -1,7 +1,3 @@
-
-#free-spoken-digit-dataset/recordings
-def get_spkid(self, wave_filename):
-        return 'a' + 'm' + 'ja'
 import os
 import os.path
 import sys
