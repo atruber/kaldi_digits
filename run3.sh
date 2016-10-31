@@ -30,5 +30,5 @@ steps/train_mono.sh --nj 225 --cmd utils/run.pl data/train_digits data/lang exp/
 steps/make_mfcc.sh --nj 50 data/test_digits exp/make_mfcc/test_digits
 steps/compute_cmvn_stats.sh data/test_digits exp/make_mfcc/test_digits
 utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph_tgpr
-steps/decode.sh --nj 50 exp/mono/graph_tgpr data/test_digits exp/mono/decode_test_digits2 
+steps/decode.sh --nj 50 exp/mono/graph_tgpr data/test_digits exp/mono/decode_test_digits3
 steps/get_ctm.sh data/test_digits exp/mono/graph_tgpr exp/mono/decode_test_digits3
