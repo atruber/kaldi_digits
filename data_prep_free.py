@@ -13,7 +13,7 @@ path = raw_input('Path to tidigits/data. For example: /home/u/fall15/atruber/fre
 
 def make_sets(path): 
 	for f in os.listdir(path):
-    	ones.append(f)
+	    ones.append(f)
 
 make_sets(path)
 
