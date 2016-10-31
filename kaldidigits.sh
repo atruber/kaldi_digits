@@ -18,7 +18,7 @@ mv dict/phones.txt dict/nonsilence_phones.txt
 cp dict/lexicon.txt dict/lexicon_words.txt
 echo "<SIL> SIL" >> dict/lexicon.txt 
 utils/prepare_lang.sh --position-dependent-phones false dict "<SIL>" dict/tmp data/lang
-../kaldi/tools/openfst/bin/fstcompile --acceptor=true --isymbols=data/lang/words.txt --osymbols=data/lang/words.txt --keep_isymbols=false --keep_osymbols=false G.txt > data/lang/G.fst
+../kaldi/tools/openfst/bin/fstcompile --isymbols=data/lang/words.txt --osymbols=data/lang/words.txt --keep_isymbols=false --keep_osymbols=false G.txt > data/lang/G.fst
 
 
 
