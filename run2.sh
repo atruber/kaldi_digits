@@ -1,5 +1,5 @@
 #! /bin/bash
-
+rm -rf data
 mkdir -p data/train_digits
 mkdir -p data/test_digits
 ./data_prep_tidigits.py
