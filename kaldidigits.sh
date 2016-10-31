@@ -22,12 +22,12 @@ utils/prepare_lang.sh --position-dependent-phones false dict "<SIL>" dict/tmp da
 
 
 
-steps/make_mfcc.sh data/train_digits exp/make_mfcc/train_digits #removed --nj 1
-steps/compute_cmvn_stats.sh data/train_digits exp/make_mfcc/train_digits
-steps/train_mono.sh --cmd utils/run.pl data/train_digits data/lang exp/mono #removed --nj 1
-../kaldi/src/fstbin/fstcopy 'ark:gunzip -c ../kaldi_digits/exp/mono/fsts.1.gz|' ark,t:- | head -n 20
-steps/make_mfcc.sh data/test_digits exp/make_mfcc/test_digits #removed --nj 1
-steps/compute_cmvn_stats.sh data/test_digits exp/make_mfcc/test_digits
-utils/mkgraph.sh --mono data/lang_test_tg exp/mono exp/mono/graph_tgpr
-steps/decode.sh exp/mono/graph_tgpr data/test_digits exp/mono/decode_test_digits #removed --nj 1
-steps/get_ctm.sh data/test_digits exp/mono/graph_tgpr exp/mono/decode_test_digits
+#steps/make_mfcc.sh --nj 112 data/train_digits exp/make_mfcc/train_digits #removed --nj 1
+#steps/compute_cmvn_stats.sh data/train_digits exp/make_mfcc/train_digits
+#steps/train_mono.sh --nj 112 --cmd utils/run.pl data/train_digits data/lang exp/mono #removed --nj 1
+#../kaldi/src/fstbin/fstcopy 'ark:gunzip -c ../kaldi_digits/exp/mono/fsts.1.gz|' ark,t:- | head -n 20
+#steps/make_mfcc.sh --nj 113 data/test_digits exp/make_mfcc/test_digits #removed --nj 1
+#steps/compute_cmvn_stats.sh data/test_digits exp/make_mfcc/test_digits
+#utils/mkgraph.sh --mono data/lang_test_tg exp/mono exp/mono/graph_tgpr
+#steps/decode.sh --nj 113 exp/mono/graph_tgpr data/test_digits exp/mono/decode_test_digits #removed --nj 1
+#steps/get_ctm.sh data/test_digits exp/mono/graph_tgpr exp/mono/decode_test_digits
