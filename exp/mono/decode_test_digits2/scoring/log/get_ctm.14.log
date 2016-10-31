@@ -1,0 +1,11 @@
+# set -o pipefail && mkdir -p exp/mono/decode_test_digits2/score_14/ && lattice-1best --lm-scale=14 "ark:gunzip -c exp/mono/decode_test_digits2/lat.1.gz |" ark:- | lattice-align-words-lexicon exp/mono/graph_tgpr/phones/align_lexicon.int exp/mono/decode_test_digits2/../final.mdl ark:- ark:- | nbest-to-ctm --frame-shift=0.01 --print-silence=false ark:- - | utils/int2sym.pl -f 5 exp/mono/graph_tgpr/words.txt | cat > exp/mono/decode_test_digits2/score_14/test_digits2.ctm 
+# Started at Mon Oct 31 08:53:42 EDT 2016
+#
+lattice-1best --lm-scale=14 'ark:gunzip -c exp/mono/decode_test_digits2/lat.1.gz |' ark:- 
+nbest-to-ctm --frame-shift=0.01 --print-silence=false ark:- - 
+lattice-align-words-lexicon exp/mono/graph_tgpr/phones/align_lexicon.int exp/mono/decode_test_digits2/../final.mdl ark:- ark:- 
+LOG (lattice-1best:main():lattice-1best.cc:92) Done converting 501 to best path, 0 had errors.
+LOG (lattice-align-words-lexicon:main():lattice-align-words-lexicon.cc:138) Successfully aligned 501 lattices; 0 had errors.
+LOG (nbest-to-ctm:main():nbest-to-ctm.cc:111) Converted 501 linear lattices to ctm format; 0 had errors.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Oct 31 08:53:42 EDT 2016, elapsed time 0 seconds
